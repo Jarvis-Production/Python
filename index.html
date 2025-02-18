@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python для начинающих</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PythonStart</div>
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#basics">Основы</a></li>
+            <li><a href="#interactive" class="practice-btn">Практика</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 data-aos="fade-up">Изучаем Python с нуля</h1>
+        <p data-aos="fade-up" data-aos-delay="200">Простой путь в мир программирования</p>
+    </section>
+
+    <section id="basics" class="content-section">
+        <h2 data-aos="fade-right">Основы Python</h2>
+        <div class="cards-container">
+            <div class="card" data-aos="zoom-in">
+                <h3>Переменные</h3>
+                <div class="code-example">
+                    <pre><code>name = "Иван"
+age = 25
+print(f"Привет, {name}!")</code></pre>
+                </div>
+            </div>
+            <!-- Добавьте больше карточек с темами -->
+        </div>
+    </section>
+
+    <section id="curriculum" class="content-section">
+        <h2 data-aos="fade-right">Программа обучения</h2>
+        <div class="curriculum-grid">
+            <!-- Модуль 1 -->
+            <div class="module" data-aos="fade-up">
+                <h3>Модуль 1: Введение в Python</h3>
+                <ul class="lessons-list">
+                    <li><a href="#lesson1">Установка Python и IDE</a></li>
+                    <li><a href="#lesson2">Переменные и типы данных</a></li>
+                    <li><a href="#lesson3">Ввод и вывод данных</a></li>
+                    <li><a href="#lesson4">Основные операторы</a></li>
+                </ul>
+            </div>
+            
+            <!-- Модуль 2 -->
+            <div class="module" data-aos="fade-up" data-aos-delay="100">
+                <h3>Модуль 2: Управление потоком</h3>
+                <ul class="lessons-list">
+                    <li><a href="#lesson5">Условные операторы if-else</a></li>
+                    <li><a href="#lesson6">Циклы while и for</a></li>
+                    <li><a href="#lesson7">Операторы break и continue</a></li>
+                    <li><a href="#lesson8">Обработка исключений try-except</a></li>
+                </ul>
+            </div>
+            
+            <!-- Модуль 3 -->
+            <div class="module" data-aos="fade-up" data-aos-delay="200">
+                <h3>Модуль 3: Структуры данных</h3>
+                <ul class="lessons-list">
+                    <li><a href="#lesson9">Списки и кортежи</a></li>
+                    <li><a href="#lesson10">Словари</a></li>
+                    <li><a href="#lesson11">Функции</a></li>
+                    <li><a href="#lesson12">Строки и методы строк</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="lesson-content" class="content-section">
+        <div class="lesson" id="lesson1">
+            <h2 data-aos="fade-right">Установка Python и IDE</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Python можно скачать с официального сайта python.org. Рекомендуемые IDE:</p>
+                    <ul>
+                        <li>PyCharm - профессиональная IDE</li>
+                        <li>VS Code - легкий и быстрый редактор</li>
+                        <li>IDLE - встроенная IDE Python</li>
+                    </ul>
+                </div>
+                
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Ваша первая программа
+print("Привет, мир!")
+
+# Проверка версии Python
+import sys
+print(sys.version)</code></pre>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Задание</h3>
+                    <p>Установите Python и IDE по вашему выбору. Напишите и запустите программу "Привет, мир!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson2">
+            <h2 data-aos="fade-right">Переменные и типы данных</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>В Python существует несколько основных типов данных:</p>
+                    <ul>
+                        <li><strong>int</strong> - целые числа (1, 2, -5)</li>
+                        <li><strong>float</strong> - числа с плавающей точкой (1.5, -0.2)</li>
+                        <li><strong>str</strong> - строки ("Привет", 'Python')</li>
+                        <li><strong>bool</strong> - логический тип (True, False)</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p>Переменные в Python создаются при первом присваивании. Тип указывать не нужно!</p>
+                    </div>
+                </div>
+                
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Примеры создания переменных
+name = "Анна"          # строка
+age = 25              # целое число
+height = 1.75         # число с плавающей точкой
+is_student = True     # логическое значение
+
+# Проверка типа переменной
+print(type(name))     # <class 'str'>
+print(type(age))      # <class 'int'>
+
+# Преобразование типов
+str_number = "42"
+number = int(str_number)  # преобразование строки в число
+print(number + 8)     # 50</code></pre>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Задания для практики</h3>
+                    <ol>
+                        <li>Создайте переменные разных типов и выведите их значения</li>
+                        <li>Попробуйте преобразовать строку в число и обратно</li>
+                        <li>Создайте переменную с дробным числом и округлите его</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson3">
+            <h2 data-aos="fade-right">Ввод и вывод данных</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Для взаимодействия с пользователем в Python используются функции:</p>
+                    <ul>
+                        <li><strong>print()</strong> - вывод данных</li>
+                        <li><strong>input()</strong> - ввод данных</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p>Функция input() всегда возвращает строку! Для работы с числами нужно преобразовывать тип.</p>
+                    </div>
+                </div>
+                
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Простой вывод
+print("Привет, Python!")
+
+# Форматирование строк
+name = "Иван"
+age = 25
+print(f"Привет, {name}! Тебе {age} лет.")
+
+# Ввод данных
+user_name = input("Как вас зовут? ")
+user_age = int(input("Сколько вам лет? "))
+
+# Вывод с несколькими аргументами
+print("Привет,", user_name, "!", sep="")
+
+# Вывод с указанием окончания
+print("Это первая строка", end=" -> ")
+print("Это вторая строка")</code></pre>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Задания для практики</h3>
+                    <ol>
+                        <li>Напишите программу, которая спрашивает имя и возраст пользователя, затем выводит сообщение о том, сколько лет ему будет через 5 лет</li>
+                        <li>Создайте калькулятор, который запрашивает два числа и выводит их сумму</li>
+                        <li>Напишите программу для конвертации температуры из Цельсия в Фаренгейт</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson4">
+            <h2 data-aos="fade-right">Основные операторы</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <h4>Арифметические операторы:</h4>
+                    <ul>
+                        <li><strong>+</strong> - сложение</li>
+                        <li><strong>-</strong> - вычитание</li>
+                        <li><strong>*</strong> - умножение</li>
+                        <li><strong>/</strong> - деление</li>
+                        <li><strong>//</strong> - целочисленное деление</li>
+                        <li><strong>%</strong> - остаток от деления</li>
+                        <li><strong>**</strong> - возведение в степень</li>
+                    </ul>
+
+                    <h4>Операторы сравнения:</h4>
+                    <ul>
+                        <li><strong>==</strong> - равно</li>
+                        <li><strong>!=</strong> - не равно</li>
+                        <li><strong>></strong> - больше</li>
+                        <li><strong><</strong> - меньше</li>
+                        <li><strong>>=</strong> - больше или равно</li>
+                        <li><strong><=</strong> - меньше или равно</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Арифметические операции
+x = 10
+y = 3
+
+print(x + y)    # 13
+print(x - y)    # 7
+print(x * y)    # 30
+print(x / y)    # 3.3333...
+print(x // y)   # 3
+print(x % y)    # 1
+print(x ** y)   # 1000
+
+# Операторы сравнения
+a = 5
+b = 7
+print(a == b)   # False
+print(a != b)   # True
+print(a > b)    # False
+print(a < b)    # True</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson5">
+            <h2 data-aos="fade-right">Условные операторы if-else</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Условные операторы позволяют выполнять код в зависимости от условий:</p>
+                    <ul>
+                        <li><strong>if</strong> - если условие истинно</li>
+                        <li><strong>elif</strong> - иначе если (можно использовать несколько раз)</li>
+                        <li><strong>else</strong> - иначе (если все предыдущие условия ложны)</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p>В Python для обозначения блоков кода используются отступы (обычно 4 пробела)</p>
+                    </div>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Простое условие
+age = 18
+if age >= 18:
+    print("Вы совершеннолетний")
+else:
+    print("Вы несовершеннолетний")
+
+# Множественные условия
+score = 85
+if score >= 90:
+    print("Отлично!")
+elif score >= 75:
+    print("Хорошо!")
+elif score >= 60:
+    print("Удовлетворительно")
+else:
+    print("Нужно подтянуть знания")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson6">
+            <h2 data-aos="fade-right">Циклы while и for</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <h4>Цикл while:</h4>
+                    <p>Выполняется, пока условие истинно</p>
+                    
+                    <h4>Цикл for:</h4>
+                    <p>Используется для перебора последовательностей (списков, строк, диапазонов)</p>
+                    
+                    <div class="important-note">
+                        <p>Функция range(n) создает последовательность чисел от 0 до n-1</p>
+                    </div>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Цикл while
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# Цикл for с range
+for i in range(5):
+    print(i)
+
+# Цикл for со строкой
+for char in "Python":
+    print(char)
+
+# Цикл for со списком
+fruits = ["яблоко", "банан", "апельсин"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson9">
+            <h2 data-aos="fade-right">Списки и кортежи</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <h4>Списки (list):</h4>
+                    <p>Изменяемые последовательности элементов. Создаются с помощью []</p>
+                    
+                    <h4>Основные методы списков:</h4>
+                    <ul>
+                        <li><strong>append()</strong> - добавить элемент в конец</li>
+                        <li><strong>insert()</strong> - вставить элемент по индексу</li>
+                        <li><strong>remove()</strong> - удалить элемент по значению</li>
+                        <li><strong>pop()</strong> - удалить и вернуть элемент по индексу</li>
+                        <li><strong>sort()</strong> - сортировка списка</li>
+                    </ul>
+
+                    <h4>Кортежи (tuple):</h4>
+                    <p>Неизменяемые последовательности. Создаются с помощью ()</p>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Работа со списками
+numbers = [1, 2, 3, 4, 5]
+numbers.append(6)      # [1, 2, 3, 4, 5, 6]
+numbers.insert(0, 0)   # [0, 1, 2, 3, 4, 5, 6]
+numbers.remove(3)      # [0, 1, 2, 4, 5, 6]
+last = numbers.pop()   # last = 6, numbers = [0, 1, 2, 4, 5]
+
+# Срезы списков
+print(numbers[1:4])    # [1, 2, 4]
+print(numbers[::-1])   # [5, 4, 2, 1, 0]
+
+# Кортежи
+point = (10, 20)
+x, y = point          # распаковка кортежа</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson10">
+            <h2 data-aos="fade-right">Словари</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Словари (dict) - коллекции пар ключ-значение</p>
+                    
+                    <h4>Основные методы словарей:</h4>
+                    <ul>
+                        <li><strong>keys()</strong> - получить все ключи</li>
+                        <li><strong>values()</strong> - получить все значения</li>
+                        <li><strong>items()</strong> - получить пары ключ-значение</li>
+                        <li><strong>get()</strong> - безопасное получение значения</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Создание словаря
+person = {
+    "name": "Иван",
+    "age": 25,
+    "city": "Москва"
+}
+
+# Доступ к элементам
+print(person["name"])          # Иван
+print(person.get("age"))       # 25
+print(person.get("email", "не указан"))  # не указан
+
+# Изменение и добавление
+person["age"] = 26
+person["email"] = "ivan@example.com"
+
+# Перебор словаря
+for key in person.keys():
+    print(key)
+
+for key, value in person.items():
+    print(f"{key}: {value}")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson11">
+            <h2 data-aos="fade-right">Функции</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Функции определяются с помощью ключевого слова def</p>
+                    
+                    <h4>Особенности функций в Python:</h4>
+                    <ul>
+                        <li>Могут возвращать несколько значений</li>
+                        <li>Поддерживают параметры по умолчанию</li>
+                        <li>Поддерживают именованные аргументы</li>
+                        <li>Могут принимать произвольное число аргументов</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Простая функция
+def greet(name):
+    return f"Привет, {name}!"
+
+# Функция с параметром по умолчанию
+def power(x, n=2):
+    return x ** n
+
+# Функция с множеством возвращаемых значений
+def divide(a, b):
+    return a // b, a % b
+
+# Функция с произвольным числом аргументов
+def sum_all(*args):
+    return sum(args)
+
+# Примеры использования
+print(greet("Анна"))          # Привет, Анна!
+print(power(2))               # 4
+print(power(2, 3))           # 8
+quotient, remainder = divide(10, 3)
+print(sum_all(1, 2, 3, 4))   # 10</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson12">
+            <h2 data-aos="fade-right">Работа с файлами</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>В Python есть несколько режимов открытия файлов:</p>
+                    <ul>
+                        <li><strong>'r'</strong> - чтение (по умолчанию)</li>
+                        <li><strong>'w'</strong> - запись (создает новый файл)</li>
+                        <li><strong>'a'</strong> - добавление в конец</li>
+                        <li><strong>'b'</strong> - бинарный режим</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p>Всегда используйте конструкцию with для работы с файлами - она автоматически закроет файл</p>
+                    </div>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Запись в файл
+with open('example.txt', 'w', encoding='utf-8') as file:
+    file.write('Привет, мир!\n')
+    file.write('Это новая строка')
+
+# Чтение всего файла
+with open('example.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
+    print(content)
+
+# Чтение построчно
+with open('example.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        print(line.strip())
+
+# Добавление в файл
+with open('example.txt', 'a', encoding='utf-8') as file:
+    file.write('\nДобавляем новую строку')</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson13">
+            <h2 data-aos="fade-right">Обработка исключений</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Исключения помогают обрабатывать ошибки в программе:</p>
+                    <ul>
+                        <li><strong>try</strong> - блок кода, где может возникнуть ошибка</li>
+                        <li><strong>except</strong> - обработка конкретной ошибки</li>
+                        <li><strong>else</strong> - выполняется, если ошибок не было</li>
+                        <li><strong>finally</strong> - выполняется всегда</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Базовая обработка исключений
+try:
+    number = int(input("Введите число: "))
+    result = 100 / number
+    print(f"Результат: {result}")
+except ValueError:
+    print("Ошибка: введите корректное число")
+except ZeroDivisionError:
+    print("Ошибка: деление на ноль")
+except Exception as e:
+    print(f"Произошла ошибка: {e}")
+else:
+    print("Операция выполнена успешно")
+finally:
+    print("Завершение программы")
+
+# Создание собственного исключения
+class MyError(Exception):
+    def __init__(self, message):
+        self.message = message
+
+# Использование собственного исключения
+def check_age(age):
+    if age < 0:
+        raise MyError("Возраст не может быть отрицательным")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson14">
+            <h2 data-aos="fade-right">Модули и пакеты</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>Модули - это файлы с расширением .py, содержащие код Python</p>
+                    <h4>Способы импорта:</h4>
+                    <ul>
+                        <li><strong>import module</strong> - импорт всего модуля</li>
+                        <li><strong>from module import item</strong> - импорт конкретного элемента</li>
+                        <li><strong>from module import *</strong> - импорт всех элементов</li>
+                        <li><strong>import module as alias</strong> - импорт с псевдонимом</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Импорт стандартных модулей
+import random
+import math
+from datetime import datetime
+
+# Использование функций из модулей
+random_number = random.randint(1, 100)
+square_root = math.sqrt(16)
+current_time = datetime.now()
+
+# Создание собственного модуля (utils.py)
+def greeting(name):
+    return f"Привет, {name}!"
+
+def calculate_age(birth_year):
+    return datetime.now().year - birth_year
+
+# Использование собственного модуля
+from utils import greeting
+print(greeting("Анна"))
+
+# Работа с пакетами
+import requests  # Требуется установка: pip install requests
+
+response = requests.get('https://api.example.com/data')
+print(response.json())</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson15">
+            <h2 data-aos="fade-right">Объектно-ориентированное программирование</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>ООП основано на трех принципах:</p>
+                    <ul>
+                        <li><strong>Инкапсуляция</strong> - объединение данных и методов</li>
+                        <li><strong>Наследование</strong> - создание новых классов на основе существующих</li>
+                        <li><strong>Полиморфизм</strong> - разное поведение одного и того же метода</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Создание класса
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        pass
+
+# Наследование
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} говорит: Гав!"
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} говорит: Мяу!"
+
+# Использование классов
+dog = Dog("Бобик")
+cat = Cat("Мурка")
+
+print(dog.speak())  # Бобик говорит: Гав!
+print(cat.speak())  # Мурка говорит: Мяу!
+
+# Приватные атрибуты и методы
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # приватный атрибут
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            
+    def get_balance(self):
+        return self.__balance</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson16">
+            <h2 data-aos="fade-right">Декораторы и генераторы</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <h4>Декораторы:</h4>
+                    <p>Функции, которые модифицируют поведение других функций</p>
+                    
+                    <h4>Генераторы:</h4>
+                    <p>Функции, которые генерируют последовательность значений</p>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Декоратор для измерения времени выполнения
+import time
+
+def measure_time(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"Время выполнения: {end - start} секунд")
+        return result
+    return wrapper
+
+@measure_time
+def slow_function():
+    time.sleep(1)
+    return "Готово!"
+
+# Генератор чисел Фибоначчи
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# Использование генератора
+for number in fibonacci(10):
+    print(number)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson17">
+            <h2 data-aos="fade-right">Работа с JSON и API</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>Теория</h3>
+                    <p>JSON (JavaScript Object Notation) - популярный формат обмена данными</p>
+                    <h4>Основные методы:</h4>
+                    <ul>
+                        <li><strong>json.dumps()</strong> - преобразование Python в JSON</li>
+                        <li><strong>json.loads()</strong> - преобразование JSON в Python</li>
+                    </ul>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code>import json
+import requests
+
+# Работа с JSON
+data = {
+    "name": "Иван",
+    "age": 25,
+    "cities": ["Москва", "Санкт-Петербург"]
+}
+
+# Сохранение в JSON
+json_string = json.dumps(data, ensure_ascii=False, indent=4)
+with open('data.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+# Чтение из JSON
+with open('data.json', 'r', encoding='utf-8') as f:
+    loaded_data = json.load(f)
+
+# Работа с API
+response = requests.get('https://api.example.com/data')
+if response.status_code == 200:
+    api_data = response.json()
+    print(api_data)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson" id="lesson18">
+            <h2 data-aos="fade-right">Первые шаги в Python для начинающих</h2>
+            <div class="lesson-content" data-aos="fade-up">
+                <div class="theory">
+                    <h3>С чего начать?</h3>
+                    <div class="beginner-friendly-note">
+                        <p>🎯 <strong>Важно знать:</strong> Python - один из самых простых языков для начала обучения программированию. Не бойтесь делать ошибки - это нормальная часть обучения!</p>
+                    </div>
+
+                    <h4>Что нужно установить:</h4>
+                    <ol class="setup-steps">
+                        <li>
+                            <strong>Python</strong>
+                            <p>Скачайте Python с официального сайта python.org</p>
+                            <div class="tip">
+                                💡 При установке на Windows обязательно поставьте галочку "Add Python to PATH"
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Редактор кода</strong>
+                            <p>PyCharm Community Edition или Visual Studio Code - бесплатные и удобные</p>
+                        </li>
+                    </ol>
+
+                    <h4>Ваша первая программа:</h4>
+                    <div class="first-program">
+                        <p>Создайте файл first_program.py и напишите в нём:</p>
+                    </div>
+                </div>
+
+                <div class="practice">
+                    <h3>Практика</h3>
+                    <div class="code-example">
+                        <pre><code># Это комментарий - Python его игнорирует
+# Давайте создадим простую программу
+
+# 1. Простой вывод текста
+print("Привет! Я изучаю Python!")
+
+# 2. Спросим имя пользователя
+name = input("Как тебя зовут? ")
+
+# 3. Выведем приветствие
+print(f"Привет, {name}! Рад познакомиться!")
+
+# 4. Попробуем математику
+print("Давай посчитаем твой возраст через 5 лет")
+age = input("Сколько тебе лет? ")
+
+# Преобразуем строку в число
+future_age = int(age) + 5
+
+# Выводим результат
+print(f"Через 5 лет тебе будет {future_age} лет!")</code></pre>
+                    </div>
+
+                    <div class="explanation">
+                        <h4>📝 Разберём код:</h4>
+                        <ul>
+                            <li><code>print()</code> - выводит текст на экран</li>
+                            <li><code>input()</code> - запрашивает ввод от пользователя</li>
+                            <li><code>int()</code> - превращает текст в число</li>
+                            <li><code>f"текст {переменная}"</code> - форматированная строка</li>
+                        </ul>
+                    </div>
+
+                    <div class="try-yourself">
+                        <h4>🎯 Попробуйте сами:</h4>
+                        <ol>
+                            <li>Запустите программу</li>
+                            <li>Измените текст приветствия</li>
+                            <li>Добавьте вопрос о любимом цвете</li>
+                            <li>Выведите сообщение с именем и любимым цветом</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="common-errors">
+                    <h3>🚫 Частые ошибки новичков:</h3>
+                    <ul>
+                        <li>
+                            <strong>SyntaxError</strong>
+                            <p>Забыли кавычки или скобку? Проверьте внимательно!</p>
+                        </li>
+                        <li>
+                            <strong>IndentationError</strong>
+                            <p>В Python важны отступы. Используйте пробелы или Tab, но не смешивайте их</p>
+                        </li>
+                        <li>
+                            <strong>TypeError</strong>
+                            <p>Нельзя складывать текст и число. Используйте int() для преобразования</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="next-steps">
+                    <h3>📚 Что дальше?</h3>
+                    <ul>
+                        <li>Изучите переменные и типы данных</li>
+                        <li>Познакомьтесь с условиями if-else</li>
+                        <li>Попробуйте циклы while и for</li>
+                        <li>Создайте простой калькулятор</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interactive" class="content-section">
+        <h2 data-aos="fade-right">Практика Python</h2>
+        <div class="code-playground">
+            <div class="code-playground-header">
+                <div class="playground-title">Python редактор</div>
+                <div class="actions">
+                    <button class="clear-btn">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                        Очистить
+                    </button>
+                </div>
+            </div>
+            
+            <div class="editor-container">
+                <textarea id="code-editor" spellcheck="false">print("Привет, мир!")
+name = input("Как вас зовут? ")
+print(f"Привет, {name}!")</textarea>
+            </div>
+            
+            <div class="controls">
+                <button class="run-button">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M8 5v14l11-7z"/>
+                    </svg>
+                    Запустить
+                </button>
+            </div>
+            
+            <div class="output-container">
+                <div class="output-header">
+                    <span>Результат выполнения:</span>
+                    <button class="clear-output">Очистить вывод</button>
+                </div>
+                <pre id="output" class="output"></pre>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+</html> 
